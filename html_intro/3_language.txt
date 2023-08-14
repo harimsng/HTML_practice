@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<title>&lt;title&gt;</title>
+	</head>
+	<body>
+		<p>Korean example: <span lang="ko">한글</span>.</p>
+		<p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
+		<p>English example: <span lang="en">English</span>.</p>
+	</body>
+</html>
