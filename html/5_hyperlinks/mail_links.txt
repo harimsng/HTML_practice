@@ -1,0 +1,2 @@
+<a href="mailto:halim9512@naver.com">send mail to myself</a>
+<a href="mailto:">send mail to someone"</a>

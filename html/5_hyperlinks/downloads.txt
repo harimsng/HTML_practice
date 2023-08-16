@@ -1,0 +1,17 @@
+<p>
+<a href="https://www.example.com/large_report.pdf">
+	Download the sales report (PDF, 10MB)
+</a>
+</p>
+<p>
+<a href="https://www.example.com/video-stream/" target="_blank">
+	Watch the video (stream opens in seperate tab, HD quality)
+</a>
+</p>
+<p>
+<a
+	href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+	download="custom name">
+	Download Latest Firefox for Windows (64-bit) (English, US)
+</a>
+</p>

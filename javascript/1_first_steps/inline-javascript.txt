@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<script>
+			function createParagraph() {
+				const para	= document.createElement("p");
+
+				para.textContent = "You click the button!";
+				document.body.appendChild(para);
+			}
+		</script>
+	</head>
+	<button onclick="createParagraph()">Click me!</button>
+</html>
