@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<h1 id="heading">Hello, World!</h1>
+		<p id="para">lorem ipsum</p>
+		<label for="field">input</label>
+		<input type="string" required id="field" class="field">
+		<input type="submit" class="submit">
+		<script>
+			const paragraph = document.querySelector("#para");
+			const field		= document.querySelector(".field");
+			const submit	= document.querySelector(".submit");
+
+			submit.addEventListener("click", work);
+			function work() {
+				const text	= field.value;
+				paragraph.textContent = text;
+				field.value = "";
+			}
+		</script>
+	</body>
+</html>

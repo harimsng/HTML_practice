@@ -1,0 +1,58 @@
+<!---
+	MDN guild about useful string methods
+	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<h1 id="heading">Hello, World!</h1>
+		<p id="para">lorem ipsum</p>
+		<input type="string" class="field">
+		<input type="submit" class="submit">
+		<script>
+			const paragraph		= document.querySelector("#para");
+			const field			= document.querySelector(".field");
+			const submit		= document.querySelector(".submit");
+
+			submit.addEventListener("click", update);
+
+			function update() {
+				paragraph.textContent = field.value;
+				checkString(field.value);
+				field.value = "";
+			}
+			
+			function checkString(browserType) {
+				const includesStr = "z";
+				if (browserType.includes(includesStr) == true) {
+					console.log(`browserType: ${browserType} includes ${includesStr}`);
+					console.log(`index: ${browserType.indexOf(includesStr)}`);
+				} else {
+					console.log(`browserType: ${browserType} doesn't includes ${includesStr}`);
+				}
+
+				const startStr = "mo";
+				if (browserType.startsWith(startStr) == true) {
+					console.log(`browserType: ${browserType} starts with ${startStr}`);
+					console.log(`index: ${browserType.indexOf(startStr)}`);
+				} else {
+					console.log(`browserType: ${browserType} doesn't starts with ${startStr}`);
+				}
+
+				const endStr = "zilla";
+				if (browserType.endsWith(endStr) == true) {
+					console.log(`browserType: ${browserType} includes ${endStr}`);
+					console.log(`index: ${browserType.indexOf(endStr)}`);
+				} else {
+					console.log(`browserType: ${browserType} doesn't includes ${endStr}`);
+				}
+			}
+
+
+		</script>
+	</body>
+</html>

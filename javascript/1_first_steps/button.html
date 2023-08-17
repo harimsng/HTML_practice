@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<button>Start machine</button>
+		<p>The machine is stopped.</p>
+		<script>
+			const btn	= document.querySelector("button");
+			const txt	= document.querySelector("p");
+			const msg	= [txt.textContent, "The machine in running."];
+
+			let stat	= false;
+
+			btn.addEventListener("click", update);
+			function update() {
+				if (stat === false) {
+					txt.textContent = msg[1];
+					stat = true;
+				} else {
+					txt.textContent = msg[0];
+					stat = false;
+				}
+			}
+		</script>
+	</body>
+</html>

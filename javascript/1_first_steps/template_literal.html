@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<p></p>
+		<script>
+			const para	= document.querySelector("p");
+
+			const song			= "Dance of Eternity";
+			const score			= 9;
+			const highestScore	= 10;
+			const output = `I like the song ${song}.\n
+I give it a score of ${score / highestScore * 100}%.`;
+			para.textContent = output;
+		</script>
+	</body>
+</html>
