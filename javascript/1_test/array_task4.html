@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Strings: Task 4</title>
+    <title>Arrays: Task 4</title>
     <style>
       p {
         color: purple;
@@ -26,20 +26,23 @@
 
   </body>
   <script>
-    const theorem = 'Pythagorean theorem';
+    const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
 
-    const a = 5;
-    const b = 8;
+    // Add your code here
+	let index = birds.indexOf("Eagles");
+	birds.splice(index, 1);
 
-	const myString = `Using ${theorem}, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${((a ** 2 + b ** 2) ** 0.5).toFixed(2)}.`;
-
+	const eBirds = birds.filter((bird) => {
+		return bird.startsWith('E');
+	});
 
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
 
     const para1 = document.createElement('p');
-    para1.textContent = myString;
+    para1.textContent = eBirds;
+
     section.appendChild(para1);
   </script>
 

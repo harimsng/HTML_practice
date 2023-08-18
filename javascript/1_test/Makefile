@@ -1,21 +1,15 @@
-NAME	:= index.html
-
-FILES	:= $(shell ls *.html | sed 's/^$(NAME)//')
+# utilize auto index feature of nginx
+FILES	:= $(shell ls *.html)
 FILES	:= $(FILES:%.html=%.txt)
 
 LISTEN	:= localhost:8000
 ROOT	:= javascript
 DIR		:= 1_test
 
-all: clean $(NAME)
-
-$(NAME): $(FILES)
+all: clean $(FILES)
 
 $(FILES): %.txt: %.html
 	cp $< $@
-	echo "<a href=\"http://$(LISTEN)/$(ROOT)/$(DIR)/$<\" title=\"$<\">$<</a>" >> $(NAME)
-	echo "<a href=\"http://$(LISTEN)/$(ROOT)/$(DIR)/$@\" title=\"$@\">$@</a>" >> $(NAME)
-	echo "<p></p>" >> $(NAME)
 
 clean:
 	$(RM) $(NAME)
