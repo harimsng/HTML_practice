@@ -18,5 +18,20 @@ for (let index = 0; index < images.length; ++index) {
 	imgElem.setAttribute('alt', images_alt[index]);
 	thumbBar.appendChild(imgElem);
 }
+thumbBar.addEventListener("click", (event) => {
+	displayedImage.setAttribute('src', event.target.getAttribute('src'));
+	displayedImage.setAttribute('alt', event.target.getAttribute('alt'));
+});
+
+btn.addEventListener("click", () => {
+	if (btn.textContent === "Darken") {
+		overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+		btn.textContent = "Brighten";
+	}
+	else {
+		overlay.style.backgroundColor = "rgba(0,0,0,0)";
+		btn.textContent = "Darken";
+	}
+});
 
 /* Wiring up the Darken/Lighten button */
