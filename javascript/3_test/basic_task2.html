@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+	const band = {
+		name: "Dream Theater",
+		nationality: "United States",
+		genre: "Progressive Metal",
+		members: 4,
+		member: [
+			"John Petrucci",
+			"John Myung",
+			"Jordan Rudess",
+			"Mike Mangini",
+		],
+		formed: 1985,
+		split: false,
+		albums: [
+			["Images and Words", 1992],
+			["Six Degrees of Inner Turbulence", 2002],
+			["Black clouds and Silver Linings", 2009],
+			["Dramatic Turn of Events", 2011],
+			["A View From Top of The World", 2021],
+		],
+	};
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+	
+	const title = document.createElement('h1');
+	title.textContent = band.name;
+
+	bandInfo = `${band.genre} band from ${band.nationality} formed in ${band.formed}.`;
+	
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+	section.appendChild(title);
+    section.appendChild(para1);
+
+	const memberTitle = document.createElement("h2");
+	memberTitle.textContent = "Members";
+	const memberInfo = document.createElement('p');
+	memberInfo.textContent = `There are ${band.members} members, ${band.member}.`
+	section.appendChild(memberTitle);
+	section.appendChild(memberInfo);
+
+	const albumTitle = document.createElement("h2");
+	albumTitle.textContent = "Albums";
+	const albumInfo = document.createElement('p');
+	albumInfo.textContent = `My favorite albums are ${band.albums}`;
+	section.appendChild(albumTitle);
+	section.appendChild(albumInfo);
+  </script>
+
+</html>
