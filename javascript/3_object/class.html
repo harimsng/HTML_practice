@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<script>
+			class Person {
+				#name;
+
+				constructor(name) {
+					this.name = name;
+				}
+
+				introduceSelf() {
+					console.log(`hello, my name is ${this.name}!`);
+				}
+			};
+
+			class Professor extends Person {
+				// '#' set a property or method private
+				#teaches;
+
+				constructor(name, teaches) {
+					// call superclass's constructor
+					super(name);
+					this.teaches = teaches;
+				}
+
+				introduceSelf() {
+					console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
+				}
+
+				grade(paper) {
+					console.log(`${Math.floor(Math.random() * 4 + 1)}`)
+				}
+			};
+
+			const walsh = new Professor("Walsh", "Psychology");
+			walsh.introduceSelf();
+			walsh.grade("my paper");
+
+			class Student extends Person {
+				#year;
+
+				constructor(name, year) {
+					super(name);
+					this.#year = year;
+				}
+
+				introduceSelf() {
+					// reference private property
+					console.log(`My name is ${this.name}, and I'm in year ${this.#year}`);
+				}
+
+				canStudyArchery() {
+					return this.#year > 1;
+				}
+			}
+
+			const summers = new Student("Summers", 2);
+			summers.introduceSelf();
+			summers.canStudyArchery();
+
+			// error
+			// summers.#year;
+		</script>
+	</body>
+</html>
