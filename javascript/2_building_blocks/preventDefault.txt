@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="UTF-8">
+		<script src="preventDefault.js" defer></script>
+	</head>
+	<body>
+		<form>
+			<div>
+				<label for="field1">First name: </label>
+				<input id="field1" type="text" />
+			</div>
+
+			<div>
+				<label for="field2">Last name: </label>
+				<input id="field2" type="text" />
+			<div>
+					
+			<div>
+				<input id="submit" type="submit" />
+			</div>
+		</form>
+		<p></p>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+<style>
+	#container {
+		background-color: red;
+		height: 500px;
+	}
+	.tile {
+		height: 100px;
+		width: 25%;
+		float: left;
+		background-color: grey;
+	}
+</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+		</div>
+		<script>
+			const container = document.querySelector("#container");
+
+			function random(number) {
+				return Math.floor(Math.random() * number);
+			}
+
+			function changeBg() {
+				return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+			}
+
+			// no click? https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
+			container.addEventListener("mouseover", (event) => {
+				event.target.style.backgroundColor = changeBg();
+				event.currentTarget.style.backgroundColor = changeBg();
+			});
+		</script>
+	</body>
+</html>
