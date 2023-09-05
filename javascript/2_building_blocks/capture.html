@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta character="UTF-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div class="container">
+			<button>Click me!</button>
+		</div>
+		<pre class="output"></pre>
+		<script>
+			const output = document.querySelector(".output");
+
+			function update(evt) {
+				output.textContent += `You clicked on a ${evt.currentTarget.tagName} element!\n`;
+			}
+
+			document.body.addEventListener("click", update, { capture: true });
+			document.querySelector(".container").addEventListener("click", update, { capture: true });
+			document.querySelector("button").addEventListener("click", update);
+
+		</script>
+	</body>
+</html>
