@@ -1,0 +1,6 @@
+lib	- files provide functions to fetch external resource. those use function available in nodejs like file system access. those are used by getStatic{Props, Paths} and other SSG or SSR function.
+pages - contains file to represent actual pages.
+public - image resource, ...
+components - commonly used components imported by pages.
+posts - custom resource. arbitrary directory name.
+styles - includes component specific css modules and global css. components can be assigned to specific css selector because nextjs generate unique class name for each selector.
